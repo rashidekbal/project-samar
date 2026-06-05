@@ -9,7 +9,7 @@ router=APIRouter()
 @router.post("/newConversation")
 async def chat(body:NewConversationRequestModel):
     return await new_chat_controller(body=body)
-@router.post("/")
+@router.post("/newMessage")
 async def chat(body:ChatRequestModel):
     return await chat_controller(body=body)
 @router.get("/history/{thread_id}")

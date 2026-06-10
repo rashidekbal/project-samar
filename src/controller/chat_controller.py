@@ -9,14 +9,16 @@ async def new_chat_controller(body:NewConversationRequestModel):
         response=await generate_new_conversation(mid=body.message_id,message=body.message)
         return {"data":response}
     except Exception as e:
-        raise HTTPException(status_code=400,detail=str(e))
+        print(e)
+        raise HTTPException(status_code=500,detail=str(e))
 
 async def chat_controller(body:ChatRequestModel):
     try:
         response=await generate_chat(conversation_id=body.conversation_id,mid=body.message_id,message=body.message)
         return {"data": response}
     except Exception as e:
-      raise HTTPException(status_code=400, detail=str(e))
+        print(e)
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 async def chat_history_controller(thread_id:str):

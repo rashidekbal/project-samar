@@ -25,6 +25,9 @@ class MessageTool(BaseTool):
     - delete_message_for_me :{MsgUid,role} //delete a message from my side
     - unsend_message : {MsgUid,receiverUUid} //unsend a message
     
+    Note** for send message action replyToMessageId is to be set as 'null' when not replying to a particular message 
+    also the postLink is to be set 'null' and postId -1 when post is not being sent in message
+    
     """
     args_schema :type[BaseModel]=MessageToolModel
     def _run(self, *args: Any, **kwargs: Any) -> Any:

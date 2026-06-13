@@ -1,3 +1,4 @@
+from langchain_community.tools import DuckDuckGoSearchRun
 from .auth.auth_tool import AuthTool
 from .social.follow_tool_main import FollowTool
 from .profile.profile_tool_main import ProfileTool
@@ -11,5 +12,6 @@ tools=[AuthTool(),
        SearchTool(),
        ContentTool(),
        EngagementTool(),
-       MessageTool()
+       MessageTool(),
+       DuckDuckGoSearchRun()
        ]

@@ -3,4 +3,5 @@ from .social.follow_tool_main import FollowTool
 from .profile.profile_tool_main import ProfileTool
 from .search.search_tool import SearchTool
 from .content.content_tool_main import ContentTool
-tools=[AuthTool(),FollowTool(),ProfileTool(),SearchTool(),ContentTool()]
+from .engagement.engagement_tool_main import EngagementTool
+tools=[AuthTool(),FollowTool(),ProfileTool(),SearchTool(),ContentTool(),EngagementTool()]
